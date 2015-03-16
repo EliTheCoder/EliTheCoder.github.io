@@ -536,7 +536,7 @@ q:after
 	position:absolute;
 	left:-128px;
 	top:-128px;
-	/*background:url(img/perfectCookie.png);
+	/*background:url(orteil.dashnet.org/cookieclicker/img/perfectCookie.png);
 	background-size:256px 256px;*/
 	background:url(img/empty.png);/* somehow necessary; an empty div with no background seems to be click-through */
 	cursor:pointer;
