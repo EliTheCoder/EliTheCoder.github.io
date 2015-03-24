@@ -4,11 +4,6 @@
 <meta charset="UTF-8">
 <title>The Joker : A Generator</title>
 
-<script type="text/javascript">
-//<![CDATA[
-try{if (!window.CloudFlare) {var CloudFlare=[{verbose:0,p:0,byc:0,owlid:"cf",bag2:1,mirage2:0,oracle:0,paths:{cloudflare:"/cdn-cgi/nexp/dok3v=1613a3a185/"},atok:"f0f9f8e473f6d1280ed70ba412b3b2a0",petok:"b6e264470e9d6c97b0edda52477c5912379db7a6-1427237077-1800",zone:"dashnet.org",rocket:"0",apps:{"ga_key":{"ua":"UA-29324474-2","ga_bs":"2"},"abetterbrowser":{"ie":"8"}}}];!function(a,b){a=document.createElement("script"),b=document.getElementsByTagName("script")[0],a.async=!0,a.src="//ajax.cloudflare.com/cdn-cgi/nexp/dok3v=919620257c/cloudflare.min.js",b.parentNode.insertBefore(a,b)}()}}catch(e){};
-//]]>
-</script>
 <style>
 
 html
