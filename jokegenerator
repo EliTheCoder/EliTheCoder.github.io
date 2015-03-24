@@ -90,7 +90,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 </head>
 <body>
 
-<div id="wrap"><div id="text"></div></div><div id="credit">by <a href="../">Orteil and EX-Games</a>, 2015</div>
+<div id="wrap"><div id="text"></div></div><div id="credit">by <a href="../">Orteil, JXmaster, and EX-Games</a>, 2015</div>
 
 <script>
 
@@ -100,9 +100,9 @@ function Generate()
 {
 	document.getElementById('text').innerHTML=('<a href="javascript:Generate();">'+
 	'Why did the '+
-	Choose(['chicken','cow','unicorn','duck','elephant','tiger','bear','kitty','lion','foxy','doggy','doge','dog','flap','cat','person','cardinal','robin','blue jay','human','man','woman','wolf','cougar','sheep'])+
+	Choose(['chicken','cow','unicorn','duck','elephant','tiger','bear','kitty','lion','foxy','doggy','doge','dog','cat','person','cardinal','robin','blue jay','human','man','woman','wolf','cougar','sheep','piggy','pig','robot','alien','kitten','goose'])+
 	' cross the '+
-	Choose(['road','slide','street','galaxy','sidewalk','universe','trampoline','tarp','turf','grass','field','football field','tennis court','tight rope','county line','state line','walkway'])+
+	Choose(['road','slide','street','galaxy','sidewalk','universe','trampoline','tarp','turf','grass','field','football field','tennis court','tight rope','county line','state line','walkway','dimension','portal','sticks','ladder','line','puddle'])+
 	'?'
 	+
 	'</a>'
