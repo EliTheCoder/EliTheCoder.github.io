@@ -1,4 +1,6 @@
-var tacoz = 0;
-
 var Game = {
-    click: function(taconum) {
+    click: function() {tacoz = tps + tacoz;}
+    earn: function(taconum) {tacoz = tacoz + taconum;}
+    tacoz: 0,
+    tps: 1,
+};
