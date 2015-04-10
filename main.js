@@ -10,11 +10,13 @@ var c2 = "-3";
 var d2 = "I'M NOT A SCIENTIST!";
 var q3 = "How many colors does the Huyan flag have?";
 
+function setvar() {
 var qu = document.getElementById('qu');
 var an1 = document.getElementById('an1');
 var an2 = document.getElementById('an2');
 var an3 = document.getElementById('an3');
 var an4 = document.getElementById('an4');
+}
 
 function qu1() {
   qu.textContent = q1
