@@ -19,6 +19,7 @@ var an4 = document.getElementById('an4');
 function qu1() {
   qu.textContent = q1;
   an1.textContent = a1;
-  an1.textContent = a1;
-  an1.textContent = a1;
+  an2.textContent = a2;
+  an3.textContent = a3;
+  an4.textContent = a4;
 }
