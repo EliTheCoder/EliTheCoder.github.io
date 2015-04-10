@@ -16,4 +16,9 @@ var an2 = document.getElementById('an2');
 var an3 = document.getElementById('an3');
 var an4 = document.getElementById('an4');
 
-function qu1() {qu.textContent = q1; an}
+function qu1() {
+  qu.textContent = q1;
+  an1.textContent = a1;
+  an1.textContent = a1;
+  an1.textContent = a1;
+}
