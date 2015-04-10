@@ -1,3 +1,5 @@
+setvar();
+
 var q1 = "Who made this game?";
 var a1 = "EX-Games";
 var b1 = "Orteil";
