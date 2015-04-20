@@ -1,44 +1,100 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>EX-Games</title>
-<meta name="google-site-verification" content="KZ6lT3-JOY8ZATNBAvhkbkTmTUqLqat0mdMDqA21eu0" />
-<meta name="google-site-verification" content="K79qeQhNDj3ikJ-yOd_YH-lP-P2a_d6yD0JAnAYmUWg" />
-<style type="text/css">
-p {
-  font-size: 117%;
-  text-shadow: 1px 1px 3px #111111;
-}
-body {
-  background-image: url("bg.png");
-}
-.center {
-  text-align: center;
-}
-* {
-  font-family: Courier;
-}
-h1, .subtitle, a {
-  text-align: center;
-}
-.subtitle {
-  font-size: 150%;
-}
-img {
-  display: block;
-  margin: 0px auto;
-}
-</style>
-</head>
-<body>
-<h1>Welcome to EX-Games!</h1>
-<a id="center" href="http://exmaster9.github.io/Gravity%20Land%20Web/Gravity%20Land%20Web.html">Click Here to goto Gravity Land Web!</a>
-<a id="center" href="http://exmaster9.github.io/bookreport.html">Click Here to goto Book Report</a>
-<hr />
-<p class="subtitle">By: EXmaster9 (as it is in the web address)</p>
-<br />
-<a id="center" class="subtitle" href="jokegenerator">Click Here if you want to hear a joke<p>
-<iframe src="https://todaysmeet.com/room/1711113/embed?type=live&hide_ui=0" height="400" width="100%"></iframe>
-<footer>&copy; 2015 EX-Games</footer>
-</body>
+<html lang="en">
+  <head>
+    <title>Joe Longstreet - inventor, maker</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Joe Longstreet">
+    <meta name="creator" content="Joe Longstreet">
+    <meta name="publisher" content="Joe Longstreet">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <meta name="keywords" content="Joe Longstreet, Kansas City, inventor, made, maker">
+    <meta name="description" content="Things invented / made by Joe Longstreet">
+    <link href="http://fonts.googleapis.com/css?family=Lora|Open+Sans+Condensed:700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/public/style.css">
+    <link rel="icon" href="public/favicon.ico">
+    <link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+  </head>
+  <body>
+    <header class="primary">
+      <div class="contained">
+        <h1><a href="/">Joe Longstreet</a></h1>
+        <h2>An inventor / maker living in Kansas City, Missouri</h2>
+      </div>
+    </header>
+    <article class="primary">
+      <div class="pages"><a href="/dest/wild-thangs.html" style="background-image:url('/public/posters/wild-thangs.jpg')" class="page Wild Thangs">
+          <h2 class="title">Wild Thangs</h2></a><a href="/dest/eddie.html" style="background-image:url('/public/posters/eddie.jpg')" class="page Eddie-O-Matic">
+          <h2 class="title">Eddie-O-Matic</h2></a><a href="/dest/retropie.html" style="background-image:url('/public/posters/retropie.png')" class="page RetroPie">
+          <h2 class="title">RetroPie</h2></a><a href="/dest/redrocket.html" style="background-image:url('/public/posters/red-rocket.jpg')" class="page Red Rocket">
+          <h2 class="title">Red Rocket</h2></a><a href="/dest/annie.html" style="background-image:url('/public/posters/annie.png')" class="page Annie">
+          <h2 class="title">Annie</h2></a><a href="/dest/frazy.html" style="background-image:url('/public/posters/frazy.png')" class="page Frazy">
+          <h2 class="title">Frazy</h2></a><a href="/dest/facepunch.html" style="background-image:url('/public/posters/facepunch.png')" class="page FacePunch">
+          <h2 class="title">FacePunch</h2></a><a href="/dest/fart-charade.html" style="background-image:url('/public/posters/fartcharade.png')" class="page FartCharade">
+          <h2 class="title">FartCharade</h2></a><a href="/dest/faceholder.html" style="background-image:url('/public/posters/faceholder.jpg')" class="page Faceholder">
+          <h2 class="title">Faceholder</h2></a><a href="/dest/future-of-javascript.html" style="background-image:url('/public/posters/qr-code.jpg')" class="page Future of JavaScript">
+          <h2 class="title">Future of JavaScript</h2></a>
+      </div>
+    </article>
+    <footer class="primary">
+      <nav class="contained">
+        <ul>
+          <li><a href="https://github.com/joelongstreet/" target="_blank">on Github</a></li>
+          <li><a href="http://twitter.com/joelongstreet" target="_blank">on Twitter</a></li>
+          <li><a href="http://instagram.com/joelongstreet" target="_blank">on Instagram</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <style type="text/css">
+      article.primary{
+        padding-top: 0px;
+      }
+      .pages{
+        overflow: hidden;
+      }
+      .page{
+        margin: 0;
+        list-style-type: none;
+        display: inline-block;
+        float: left;
+        position: relative;
+        width: 50%;
+        padding-bottom: 50%;
+        overflow: hidden;
+        background-size: contain;
+      }
+      a{
+        color: inherit;
+      }
+      h2.title{
+        position: absolute;
+        font-family: 'Open Sans Condensed', serif;
+        font-size: 130%;
+        background-color: white;
+        padding: 10px;
+        bottom: 20px;
+        right: 0;
+        text-align: right;
+        max-width: 75%;
+      }
+      @media only screen and (min-width : 800px) {
+        article.primary{
+          padding-top: 49px;
+        }
+        .page{
+          width: 25%;
+          padding-bottom: 25%;
+        }
+      }
+    </style>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-3920837-6', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>
