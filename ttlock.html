@@ -17,14 +17,16 @@ img:hover {
 </head>
 <body>
   <img src="lock-icon.png" onmouseup="lock();">
-  <a src="http://ex-games.org/tacotapperdev.html"></a>
-  <h2></h2>
+  <a d="yes" src="http://ex-games.org/tacotapperdev.html"></a>
+  <h2 id="no"></h2>
   <script>
+  var yes = document.getElementById('yes');
+  var no = document.getElementById('no');
   function lock() {
     if (localStorage.key = true) {
-      jQuery('a').prepend('Click Here');
+      yes.textContent = 'Click Me'
     }else{
-      jQuery('h2').prepend('You do not have permission');
+      no.textContent = 'You need permission'
     }
   }
   </script>
