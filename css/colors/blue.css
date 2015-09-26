@@ -1,0 +1,185 @@
+/* --------------------------------------
+=========================================
+COLOR : BLUE
+
+HEX CODE: #3498db
+=========================================
+----------------------------------------- */
+.preloader:after {
+	border: solid 1px #3498db;
+}
+
+a {
+	color: #3498db;
+}
+
+::-moz-selection {
+	background: #3498db;
+}
+
+::selection {
+	background: #3498db;
+}
+
+.colored-text {
+	color:#3498db;
+}
+
+mark {
+	background: #3498db;
+}
+
+blockquote {
+	border-left:3px solid #3498db;
+}
+
+.author {
+	color:#3498db;
+}
+
+ul.list li:before {
+	background: #3498db;
+}
+
+.icon-list i {
+	color: #3498db;
+}
+
+.icon i {
+	border: solid 1px #3498db;
+	color:#3498db;
+}
+
+a.icon:hover i {
+	color:#3498db;
+}
+
+.testimonial-box:hover h5 {
+	color: #3498db;
+}
+
+.dark-bg input[type=submit]:hover,
+.dark-bg input[type=button]:hover,
+.dark-bg input[type=reset]:hover,
+.dark-bg button:hover,
+.dark-bg .standard-btn:hover {
+	color:#3498db;
+}
+
+a.secondary-btn.btn {
+	color:#3498db;
+	border:solid 1px #3498db;
+}
+
+a.secondary-btn:before {
+	background:#3498db;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+	background: #3498db;
+}
+
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-moz-range-thumb:active {
+	background: #3498db;
+}
+
+input[type=range]::-ms-thumb:hover,
+input[type=range]::-ms-thumb:active {
+	background: #3498db;
+}
+
+.icon-boxes:after {
+	border: solid 3px #3498db;
+}
+
+.icon-box i {
+	background: #3498db;
+}
+
+.icon-box:hover h3 {
+	color:#3498db;
+}
+
+.navigation {
+	background: #3498db;
+}
+
+.navigation-links li a:hover {
+	color:#3498db;
+}
+
+.navigation-links li ul {
+	background: #3498db;
+}
+
+.fs-navigation-toggle-handle.fs-navigation-enabled {
+	background:#3498db;
+}
+
+.fs-navigation-toggle-nav.fs-navigation-enabled {
+	background:#3498db;
+}
+
+.main-line {
+	background:#3498db;
+}
+
+.statistic span {
+	color: #3498db;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.active {
+	color:#3498db;
+}
+
+.single-project {
+	background:#3498db;
+}
+
+.main-package {
+	border:1px solid #3498db;
+}
+
+.main-package .package-header {
+	background: #3498db;
+}
+
+.main-package .package-header:after {
+	border-top:20px solid #3498db;
+}
+
+.main-package .get-started a {
+	color:#3498db;
+	border:solid 1px #3498db;
+}
+
+.main-package .get-started a:before {
+	background:#3498db;
+}
+
+.single-member {
+	background: #3498db;
+}
+
+.progress-pie-chart.gt-50 {
+    background-color: #3498db;
+}
+
+.ppc-progress .ppc-progress-fill {
+	background: #3498db;
+}
+
+.ppc-percents span {
+    color: #3498db;
+}
+
+.skill h3 {
+	color: #3498db;
+}
+
+.heart {
+	color: #3498db;
+}

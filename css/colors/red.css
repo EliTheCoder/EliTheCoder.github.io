@@ -1,0 +1,185 @@
+/* --------------------------------------
+=========================================
+COLOR : BLUE
+
+HEX CODE: #e74c3c
+=========================================
+----------------------------------------- */
+.preloader:after {
+	border: solid 1px #e74c3c;
+}
+
+a {
+	color: #e74c3c;
+}
+
+::-moz-selection {
+	background: #e74c3c;
+}
+
+::selection {
+	background: #e74c3c;
+}
+
+.colored-text {
+	color:#e74c3c;
+}
+
+mark {
+	background: #e74c3c;
+}
+
+blockquote {
+	border-left:3px solid #e74c3c;
+}
+
+.author {
+	color:#e74c3c;
+}
+
+ul.list li:before {
+	background: #e74c3c;
+}
+
+.icon-list i {
+	color: #e74c3c;
+}
+
+.icon i {
+	border: solid 1px #e74c3c;
+	color:#e74c3c;
+}
+
+a.icon:hover i {
+	color:#e74c3c;
+}
+
+.testimonial-box:hover h5 {
+	color: #e74c3c;
+}
+
+.dark-bg input[type=submit]:hover,
+.dark-bg input[type=button]:hover,
+.dark-bg input[type=reset]:hover,
+.dark-bg button:hover,
+.dark-bg .standard-btn:hover {
+	color:#e74c3c;
+}
+
+a.secondary-btn.btn {
+	color:#e74c3c;
+	border:solid 1px #e74c3c;
+}
+
+a.secondary-btn:before {
+	background:#e74c3c;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+	background: #e74c3c;
+}
+
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-moz-range-thumb:active {
+	background: #e74c3c;
+}
+
+input[type=range]::-ms-thumb:hover,
+input[type=range]::-ms-thumb:active {
+	background: #e74c3c;
+}
+
+.icon-boxes:after {
+	border: solid 3px #e74c3c;
+}
+
+.icon-box i {
+	background: #e74c3c;
+}
+
+.icon-box:hover h3 {
+	color:#e74c3c;
+}
+
+.navigation {
+	background: #e74c3c;
+}
+
+.navigation-links li a:hover {
+	color:#e74c3c;
+}
+
+.navigation-links li ul {
+	background: #e74c3c;
+}
+
+.fs-navigation-toggle-handle.fs-navigation-enabled {
+	background:#e74c3c;
+}
+
+.fs-navigation-toggle-nav.fs-navigation-enabled {
+	background:#e74c3c;
+}
+
+.main-line {
+	background:#e74c3c;
+}
+
+.statistic span {
+	color: #e74c3c;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.active {
+	color:#e74c3c;
+}
+
+.single-project {
+	background:#e74c3c;
+}
+
+.main-package {
+	border:1px solid #e74c3c;
+}
+
+.main-package .package-header {
+	background: #e74c3c;
+}
+
+.main-package .package-header:after {
+	border-top:20px solid #e74c3c;
+}
+
+.main-package .get-started a {
+	color:#e74c3c;
+	border:solid 1px #e74c3c;
+}
+
+.main-package .get-started a:before {
+	background:#e74c3c;
+}
+
+.single-member {
+	background:#e74c3c;
+}
+
+.progress-pie-chart.gt-50 {
+    background-color: #e74c3c;
+}
+
+.ppc-progress .ppc-progress-fill {
+	background: #e74c3c;
+}
+
+.ppc-percents span {
+    color: #e74c3c;
+}
+
+.skill h3 {
+	color: #e74c3c;
+}
+
+.heart {
+	color: #e74c3c;
+}

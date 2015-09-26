@@ -1,0 +1,185 @@
+/* --------------------------------------
+=========================================
+COLOR : YELLOW
+
+HEX CODE: #f1c40f
+=========================================
+----------------------------------------- */
+.preloader:after {
+	border: solid 1px #f1c40f;
+}
+
+a {
+	color: #f1c40f;
+}
+
+::-moz-selection {
+	background: #f1c40f;
+}
+
+::selection {
+	background: #f1c40f;
+}
+
+.colored-text {
+	color:#f1c40f;
+}
+
+mark {
+	background: #f1c40f;
+}
+
+blockquote {
+	border-left:3px solid #f1c40f;
+}
+
+.author {
+	color:#f1c40f;
+}
+
+ul.list li:before {
+	background: #f1c40f;
+}
+
+.icon-list i {
+	color: #f1c40f;
+}
+
+.icon i {
+	border: solid 1px #f1c40f;
+	color:#f1c40f;
+}
+
+a.icon:hover i {
+	color:#f1c40f;
+}
+
+.testimonial-box:hover h5 {
+	color: #f1c40f;
+}
+
+.dark-bg input[type=submit]:hover,
+.dark-bg input[type=button]:hover,
+.dark-bg input[type=reset]:hover,
+.dark-bg button:hover,
+.dark-bg .standard-btn:hover {
+	color:#f1c40f;
+}
+
+a.secondary-btn.btn {
+	color:#f1c40f;
+	border:solid 1px #f1c40f;
+}
+
+a.secondary-btn:before {
+	background:#f1c40f;
+}
+
+input[type=range]::-webkit-slider-thumb:hover,
+input[type=range]::-webkit-slider-thumb:active {
+	background: #f1c40f;
+}
+
+input[type=range]::-moz-range-thumb:hover,
+input[type=range]::-moz-range-thumb:active {
+	background: #f1c40f;
+}
+
+input[type=range]::-ms-thumb:hover,
+input[type=range]::-ms-thumb:active {
+	background: #f1c40f;
+}
+
+.icon-boxes:after {
+	border: solid 3px #f1c40f;
+}
+
+.icon-box i {
+	background: #f1c40f;
+}
+
+.icon-box:hover h3 {
+	color:#f1c40f;
+}
+
+.navigation {
+	background: #f1c40f;
+}
+
+.navigation-links li a:hover {
+	color:#f1c40f;
+}
+
+.navigation-links li ul {
+	background: #f1c40f;
+}
+
+.fs-navigation-toggle-handle.fs-navigation-enabled {
+	background:#f1c40f;
+}
+
+.fs-navigation-toggle-nav.fs-navigation-enabled {
+	background:#f1c40f;
+}
+
+.main-line {
+	background:#f1c40f;
+}
+
+.statistic span {
+	color: #f1c40f;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters li.active {
+	color:#f1c40f;
+}
+
+.single-project {
+	background:#f1c40f;
+}
+
+.main-package {
+	border:1px solid #f1c40f;
+}
+
+.main-package .package-header {
+	background: #f1c40f;
+}
+
+.main-package .package-header:after {
+	border-top:20px solid #f1c40f;
+}
+
+.main-package .get-started a {
+	color:#f1c40f;
+	border:solid 1px #f1c40f;
+}
+
+.main-package .get-started a:before {
+	background:#f1c40f;
+}
+
+.single-member {
+	background:#f1c40f;
+}
+
+.progress-pie-chart.gt-50 {
+    background-color: #f1c40f;
+}
+
+.ppc-progress .ppc-progress-fill {
+	background: #f1c40f;
+}
+
+.ppc-percents span {
+    color: #f1c40f;
+}
+
+.skill h3 {
+	color: #f1c40f;
+}
+
+.heart {
+	color: #f1c40f;
+}
