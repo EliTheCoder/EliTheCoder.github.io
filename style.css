@@ -4,7 +4,20 @@ http://www.thewebhub.com
 Released for free under a Creative Commons Attribution-Share Alike 3.0 Philippines
 */
 
-/** Common Styles */
+/** Decalring font */
+
+
+@font-face {
+    font-family: Exo;
+    src: url(exo.ttf);
+}
+
+
+/** Common Styles */n
+
+* {
+	font-family: Exo;
+}
 
 body {
 	margin: 30px 0 20px 0;
@@ -12,7 +25,7 @@ body {
 	background: #D7D7BD;
 	text-align: justify;
 	line-height: 25px;
-	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-family: Exo;
 	font-size: 11px;
 	color: #3C3C37;
 }
@@ -67,7 +80,7 @@ a:hover {
 	margin-top: -8px;
 	padding: 0px 0px 0px 92px;
 	text-transform: uppercase;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Exo;
 	font-size: 12px;
 	font-weight: bold;
 }
