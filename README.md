@@ -1,3 +1,3 @@
-# EXmaster9.github.io
-EXmaster9's Website
-http://ex-games.org
+# EX-Games
+
+EX-Games is a website meant for gaming and web development
