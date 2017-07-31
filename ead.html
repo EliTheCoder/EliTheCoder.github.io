@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Encryptor and Decryptor</title>
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC" rel="stylesheet">
+    <style>
+      * {
+        font-family: 'Bowlby One SC', cursive;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="mes" placeholder="Message" name="message">
+    <input type="text" id="key" placeholder="Key" name="key">
+    <input type="button" value="Encrypt" onclick="enc()">
+    <p id="encrypted"></p>
+    <input type="text" id="mes2" placeholder="Message" name="message">
+    <input type="text" id="key2" placeholder="Key" name="key">
+    <input type="button" value="Decrypt" onclick="dec()">
+    <p id="decrypted"></p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script>
+      function enc() {
+        var message = document.getElementById("mes").value;
+        var key = document.getElementById("key").value;
+        var encrypted = CryptoJS.AES.encrypt(message, key);
+        document.getElementById("encrypted").innerHTML = encrypted;
+      }
+      function dec() {
+        var message2 = document.getElementById("mes2").value;
+        var key2 = document.getElementById("key2").value;
+        var decryptd = CryptoJS.AES.decrypt(message2, key2);
+        document.getElementById("decrypted").innerHTML = decryptd.toString(CryptoJS.enc.Utf8);
+      }
+    </script>
+  </body>
+</html>
