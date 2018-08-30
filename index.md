@@ -2,299 +2,232 @@
 layout: default
 ---
 So this is my website so far. Do you like it?
-<style>
-body
-{
-    background:#000;
-    color:#FFF;
-}
-canvas
-{
-    background:#FFF;
-}
-#controls
-{
-    position:absolute;
-    top:0;
-    right:0;
-    margin:10px;
-}
-</style>
-<script type="text/javascript">
-var snake = window.snake || {};
-function launchFullscreen(element) {
-  if(element.requestFullscreen) {
-    element.requestFullscreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullscreen) {
-    element.webkitRequestFullscreen();
-  } else if(element.msRequestFullscreen) {
-    element.msRequestFullscreen();
+
+<canvas id="stage" height="400" width="520">
+
+<script>
+/**
+ * Namespace
+ */
+var Game      = Game      || {};
+var Keyboard  = Keyboard  || {};
+var Component = Component || {};
+
+/**
+ * Keyboard Map
+ */
+Keyboard.Keymap = {
+  37: 'left',
+  38: 'up',
+  39: 'right',
+  40: 'down'
+};
+
+/**
+ * Keyboard Events
+ */
+Keyboard.ControllerEvents = function() {
+
+  // Setts
+  var self      = this;
+  this.pressKey = null;
+  this.keymap   = Keyboard.Keymap;
+
+  // Keydown Event
+  document.onkeydown = function(event) {
+    self.pressKey = event.which;
+  };
+
+  // Get Key
+  this.getKey = function() {
+    return this.keymap[this.pressKey];
+  };
+};
+
+/**
+ * Game Component Stage
+ */
+Component.Stage = function(canvas, conf) {  
+
+  // Sets
+  this.keyEvent  = new Keyboard.ControllerEvents();
+  this.width     = canvas.width;
+  this.height    = canvas.height;
+  this.length    = [];
+  this.food      = {};
+  this.score     = 0;
+  this.direction = 'right';
+  this.conf      = {
+    cw   : 10,
+    size : 5,
+    fps  : 1000
+  };
+
+  // Merge Conf
+  if (typeof conf == 'object') {
+    for (var key in conf) {
+      if (conf.hasOwnProperty(key)) {
+        this.conf[key] = conf[key];
+      }
+    }
   }
-}
-window.onload = function(){
-    document.addEventListener("fullscreenchange", function(){snake.game.adjust();});
-    document.addEventListener("webkitfullscreenchange", function(){snake.game.adjust();});
-    document.addEventListener("mozfullscreenchange", function(){snake.game.adjust();});
-    document.addEventListener("MSFullscreenChange", function(){snake.game.adjust();});
 
-    snake.game = (function()
-    {
-        var canvas = document.getElementById('canvas');
-        var ctx = canvas.getContext('2d');
-        var status=false;
-        var score = 0;
-        var old_direction = 'right';
-        var direction = 'right';
-        var block = 10;
-        var score = 0;
-        var refresh_rate = 250;
-        var pos = [[5,1],[4,1],[3,1],[2,1],[1,1]];
-        var scoreboard = document.getElementById('scoreboard');
-        var control = document.getElementById('controls');
-        var keys = {
-            37 : 'left',
-            38 : 'up',
-            39 : 'right',
-            40 : 'down'
-            };
-        function adjust()
-        {
-            if (document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement )
-            {
-                canvas.width=window.innerWidth;
-                canvas.height=window.innerHeight;
-                control.style.display='none';
-            }
-            else
-            {
-                canvas.width=850;
-                canvas.height=600;
-                control.style.display='inline';
-            }
-        }
-        var food = [Math.round(Math.random(4)*(canvas.width - 10)), Math.round(Math.random(4)*(canvas.height - 10)),];
-        function todraw()
-        {
-            for(var i = 0; i < pos.length; i++)
-            {
-                draw(pos[i]);
-            }
-        }
-        function giveLife()
-        {
-            var nextPosition = pos[0].slice();
-            switch(old_direction)
-            {
-                case 'right':
-                    nextPosition[0] += 1;
-                    break;
-                case 'left':
-                    nextPosition[0] -= 1;
-                    break;
-                case 'up':
-                    nextPosition[1] -= 1;
-                    break;
-                case 'down':
-                    nextPosition[1] += 1;
-                    break;    
-            }
-            pos.unshift(nextPosition);
-            pos.pop();
-        }
-        function grow()
-        {
-            var nextPosition = pos[0].slice();
-            switch(old_direction)
-            {
-                case 'right':
-                    nextPosition[0] += 1;
-                    break;
-                case 'left':
-                    nextPosition[0] -= 1;
-                    break;
-                case 'up':
-                    nextPosition[1] -= 1;
-                    break;
-                case 'down':
-                    nextPosition[1] += 1;
-                    break;    
-            }
-            pos.unshift(nextPosition);
-        }
-        function loop()
-        {
-            ctx.clearRect(0,0,canvas.width,canvas.height);
-            todraw();
-            giveLife();
-            feed();
-            if(is_catched(pos[0][0]*block,pos[0][1]*block,block,block,food[0],food[1],10,10))
-            {
-                score += 10;
-                createfood();
-                scoreboard.innerHTML = score;
-                grow();
-                if(refresh_rate > 100)
-                {
-                    refresh_rate -=5;
-                }
-            }
-            snake.game.status = setTimeout(function() { loop(); },refresh_rate);
-        }
-        window.onkeydown = function(event){
-             direction = keys[event.keyCode];
-                if(direction)
-                {
-                    setWay(direction);
-                    event.preventDefault();
-                }
-            };
-        function setWay(direction)
-        {
-            switch(direction)
-            {
-                case 'left':
-                    if(old_direction!='right')
-                    {
-                        old_direction = direction;
-                    }
-                    break;
-                case 'right':
-                    if(old_direction!='left')
-                    {
-                        old_direction = direction;
-                    }
-                    break;
-                case 'up':
-                    if(old_direction!='down')
-                    {
-                        old_direction = direction;
-                    }
-                    break;
-                case 'down':
-                    if(old_direction!='up')
-                    {
-                        old_direction = direction;
-                    }
-                    break;
-            }
+};
 
-        }
-        function feed()
-        {
-            ctx.beginPath();
-            ctx.fillStyle = "#ff0000";
-            ctx.fillRect(food[0],food[1],10,10);
-            ctx.fill();
-            ctx.closePath();
-        }
-        function createfood()
-        {
-            food = [Math.round(Math.random(4)*850), Math.round(Math.random(4)*600)];
-        }
-        function is_catched(ax,ay,awidth,aheight,bx,by,bwidth,bheight) {
-            return !(
-            ((ay + aheight) < (by)) ||
-            (ay > (by + bheight)) ||
-            ((ax + awidth) < bx) ||
-            (ax > (bx + bwidth))
-            );
-        }
-        function draw(pos)
-        {
-            var x = pos[0] * block;
-            var y = pos[1] * block;
-            if(x >= canvas.width || x <= 0 || y >= canvas.height || y<= 0)
-            {
-                    document.getElementById('pause').disabled='true';
-                    snake.game.status=false;
-                    ctx.clearRect(0,0,canvas.width,canvas.height);
-                    ctx.font='40px san-serif';
-                    ctx.fillText('Game Over',300,250);
-                    ctx.font = '20px san-serif';
-                    ctx.fillStyle='#000000';
-                    ctx.fillText('To Play again Refresh the page or click the Restarts button',200,300);
-                    throw ('Game Over');
-            }
-            else
-            {
-                ctx.beginPath();
-                ctx.fillStyle='#000000';
-                ctx.fillRect(x,y,block,block);
-                ctx.closePath();
-            }
-        }
-        function pause(elem)
-        {
-            if(snake.game.status)
-            {
-                clearTimeout(snake.game.status);
-                snake.game.status=false;
-                elem.value='Play'
-            }
-            else
-            {
-                loop();
-                elem.value='Pause';
-            }
-        }
-        function begin()
-        {
-            loop();
-        }
-        function restart()
-        {
-            location.reload();
-        }
-        function start()
-        {
-            ctx.fillStyle='#000000';
-            ctx.fillRect(0,0,canvas.width,canvas.height);
-            ctx.fillStyle='#ffffff';
-            ctx.font='40px helvatica';
-            ctx.fillText('Vignesh',370,140);
-            ctx.font='20px san-serif';
-            ctx.fillText('presents',395,190);
-            ctx.font='italic 60px san-serif';
-            ctx.fillText('Feed The Snake',240,280);
-            var img = new Image();
-            img.onload = function()
-            {
-                ctx.drawImage(img,300,300,200,200);
-                ctx.fillRect(410,330,10,10);
-            }
-            img.src ='snake.png';
-        }
-        function fullscreen()
-        {
-            launchFullscreen(canvas);
-        }
-        return {
-            pause: pause,
-            restart : restart,
-            start : start,
-            begin: begin,
-            fullscreen : fullscreen,
-            adjust : adjust,
-        };
-    })();
-    snake.game.start();
-}
+/**
+ * Game Component Snake
+ */
+Component.Snake = function(canvas, conf) {
+
+  // Game Stage
+  this.stage = new Component.Stage(canvas, conf);
+
+  // Init Snake
+  this.initSnake = function() {
+
+    // Itaration in Snake Conf Size
+    for (var i = 0; i < this.stage.conf.size; i++) {
+
+      // Add Snake Cells
+      this.stage.length.push({x: i, y:0});
+		}
+	};
+
+  // Call init Snake
+  this.initSnake();
+
+  // Init Food  
+  this.initFood = function() {
+
+    // Add food on stage
+    this.stage.food = {
+			x: Math.round(Math.random() * (this.stage.width - this.stage.conf.cw) / this.stage.conf.cw),
+			y: Math.round(Math.random() * (this.stage.height - this.stage.conf.cw) / this.stage.conf.cw),
+		};
+	};
+
+  // Init Food
+  this.initFood();
+
+  // Restart Stage
+  this.restart = function() {
+    this.stage.length            = [];
+    this.stage.food              = {};
+    this.stage.score             = 0;
+    this.stage.direction         = 'right';
+    this.stage.keyEvent.pressKey = null;
+    this.initSnake();
+    this.initFood();
+  };
+};
+
+/**
+ * Game Draw
+ */
+Game.Draw = function(context, snake) {
+
+  // Draw Stage
+  this.drawStage = function() {
+
+    // Check Keypress And Set Stage direction
+    var keyPress = snake.stage.keyEvent.getKey();
+    if (typeof(keyPress) != 'undefined') {
+      snake.stage.direction = keyPress;
+    }
+
+    // Draw White Stage
+		context.fillStyle = "white";
+		context.fillRect(0, 0, snake.stage.width, snake.stage.height);
+
+    // Snake Position
+    var nx = snake.stage.length[0].x;
+		var ny = snake.stage.length[0].y;
+
+    // Add position by stage direction
+    switch (snake.stage.direction) {
+      case 'right':
+        nx++;
+        break;
+      case 'left':
+        nx--;
+        break;
+      case 'up':
+        ny--;
+        break;
+      case 'down':
+        ny++;
+        break;
+    }
+
+    // Check Collision
+    if (this.collision(nx, ny) == true) {
+      snake.restart();
+      return;
+    }
+
+    // Logic of Snake food
+    if (nx == snake.stage.food.x && ny == snake.stage.food.y) {
+      var tail = {x: nx, y: ny};
+      snake.stage.score++;
+      snake.initFood();
+    } else {
+      var tail = snake.stage.length.pop();
+      tail.x   = nx;
+      tail.y   = ny;
+    }
+    snake.stage.length.unshift(tail);
+
+    // Draw Snake
+    for (var i = 0; i < snake.stage.length.length; i++) {
+      var cell = snake.stage.length[i];
+      this.drawCell(cell.x, cell.y);
+    }
+
+    // Draw Food
+    this.drawCell(snake.stage.food.x, snake.stage.food.y);
+
+    // Draw Score
+    context.fillText('Score: ' + snake.stage.score, 5, (snake.stage.height - 5));
+  };
+
+  // Draw Cell
+  this.drawCell = function(x, y) {
+    context.fillStyle = 'rgb(170, 170, 170)';
+    context.beginPath();
+    context.arc((x * snake.stage.conf.cw + 6), (y * snake.stage.conf.cw + 6), 4, 0, 2*Math.PI, false);    
+    context.fill();
+  };
+
+  // Check Collision with walls
+  this.collision = function(nx, ny) {  
+    if (nx == -1 || nx == (snake.stage.width / snake.stage.conf.cw) || ny == -1 || ny == (snake.stage.height / snake.stage.conf.cw)) {
+      return true;
+    }
+    return false;    
+	}
+};
+
+
+/**
+ * Game Snake
+ */
+Game.Snake = function(elementId, conf) {
+
+  // Sets
+  var canvas   = document.getElementById(elementId);
+  var context  = canvas.getContext("2d");
+  var snake    = new Component.Snake(canvas, conf);
+  var gameDraw = new Game.Draw(context, snake);
+
+  // Game Interval
+  setInterval(function() {gameDraw.drawStage();}, snake.stage.conf.fps);
+};
+
+
+/**
+ * Window Load
+ */
+window.onload = function() {
+  var snake = new Game.Snake('stage', {fps: 100, size: 4});
+};
 </script>
-</head>
-<body>
-<canvas width="850" height="600" id="canvas" style="border:1px solid #333;" onclick="snake.game.begin();">
-</canvas>
-<div id="controls" style="float:right; text-align:center;">
-    <input type="button" id="pause" value="Play" onClick="snake.game.pause(this);" accesskey="p">
-    <input type="button" id="restart" value="Restart" onClick="snake.game.restart();">
-    <br/><br/>
-    <input type="button" id="fullscreen" value="Play Fullscreen" onClick="snake.game.fullscreen();">
-    <br/><br/>
-    <div style="font-size:24px;">
-    Score :
-    <span id="scoreboard">0</span>
-    </div>
-</div>
-</body>
