@@ -3,7 +3,7 @@ layout: default
 ---
 So this is my website so far. Do you like it?
 
-<canvas id="stage" height="400" width="520">
+<canvas id="stage" height="400" width="520" style="border-style: solid; border-color: 'gray';">
 
 <script>
 /**
