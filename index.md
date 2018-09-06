@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+
+<iframe src="https://editor.p5js.org/embed/HylofEW0PQ"></iframe>
+
 <canvas id="stage" height="400" width="520" style="border-style: solid;border-color: gray;border-width: 2px;border-radius: 5px;"></canvas>
 
 <script>
@@ -229,4 +232,4 @@ window.onload = function() {
 };
 </script>
 
-<iframe src="https://editor.p5js.org/embed/HylofEW0PQ"></iframe>
+
