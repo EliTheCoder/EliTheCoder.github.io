@@ -232,4 +232,4 @@ window.onload = function() {
 };
 </script>
 
-<iframe src="https://editor.p5js.org/embed/HylofEW0PQ" width="520" height="400"></iframe>
+<iframe src="https://editor.p5js.org/embed/HylofEW0PQ" width="520" height="400" style="border-style: solid;border-color: gray;border-width: 2px;border-radius: 5px;"></iframe>
