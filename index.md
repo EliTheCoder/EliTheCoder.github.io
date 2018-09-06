@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<canvas id="stage" height="400" width="520" style="border-style: solid;border-color: gray;border-width: 2px;border-radius: 5px;">
+<canvas id="stage" height="400" width="520" style="border-style: solid;border-color: gray;border-width: 2px;border-radius: 5px;"></canvas>
 
 <script>
 /**
