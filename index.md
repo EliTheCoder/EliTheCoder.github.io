@@ -1,6 +1,11 @@
 ---
 layout: default
 ---
+<style>
+  .inner {
+    width: 750px !important;
+  }
+</style>
 
 <a href="https://github.com/EliTheCoder"><img src="social-icons/github.png" /></a>
 <a href="mailto:elithecoder@elithecoder.com"><img src="social-icons/mail.png" /></a>
