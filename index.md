@@ -3,7 +3,7 @@ layout: default
 ---
 <style>
   .inner {
-    width: 750px !important;
+    width: 749px !important;
   }
   img {
     width: 64px;
