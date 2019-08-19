@@ -5,6 +5,17 @@ layout: default
   .inner {
     width: 750px !important;
   }
+  img {
+    width: 64px;
+    height: 64px;
+    padding: inherit;
+    transition: all 0.25s ease;
+  }
+  img:hover {
+    width: 54px;
+    height: 54px;
+    padding: 5px;
+  }
 </style>
 
 <a href="https://github.com/EliTheCoder"><img src="social-icons/github.png" /></a>
