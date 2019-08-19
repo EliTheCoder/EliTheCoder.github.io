@@ -16,6 +16,9 @@ layout: default
     height: 56px;
     padding: 4px;
   }
+  footer {
+    visibility: hidden !important;
+  }
 </style>
 
 <a href="https://github.com/EliTheCoder"><img src="social-icons/github.png" /></a>
