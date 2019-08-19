@@ -12,9 +12,9 @@ layout: default
     transition: all 0.25s ease;
   }
   img:hover {
-    width: 54px;
-    height: 54px;
-    padding: 5px;
+    width: 56px;
+    height: 56px;
+    padding: 4px;
   }
 </style>
 
