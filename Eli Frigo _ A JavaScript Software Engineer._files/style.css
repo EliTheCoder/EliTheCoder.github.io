@@ -268,7 +268,8 @@ body {
     line-height: 1.5;
     color: #ffffff;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-    background: #141818 url(../images/body-bg.png) 0 0 repeat
+    background:  url(../images/body-bg.png) 0 0 repeat
+    linear-gradient(-90deg, #141818, #181c1c, #141818);
 }
 
 a {
