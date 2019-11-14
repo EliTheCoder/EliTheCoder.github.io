@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Kanit:800&display=swap');
+
+body {
+    background-color: black;
+}
+
+* {
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2000%;
+    font-family: 'Kanit', sans-serif;
+    position: fixed;
+    top: 50%;
+    padding-left: 10%;
+    transform: translate(0%, -50%);
+}
+
+div {
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 737px;
+    width: 64px;
+    transform: translate(400%, -53%);
+    padding: 0;
+    border-width: 0;
+}
+
+img {
+    width: 64px;
+    height: 64px;
+    transition: all 0.25s ease;
+}
+
+img:hover {
+    width: 56px;
+    height: 56px;
+}
