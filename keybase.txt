@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/elithecoder
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://elithecoder.com
+  * I am elithecoder (https://keybase.io/elithecoder) on keybase.
+  * I have a public key ASCE4j28fPyG4DV8VDOmmj3lJ0M4prHWdtKyAke5_Bxv6go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101532aea6aa793487a0ff3139292234b8e4fd005b2cbb7338e0812255cfc3b04320a",
+      "host": "keybase.io",
+      "kid": "012084e23dbc7cfc86e0357c5433a69a3de5274338a6b1d676d2b20247b9fc1c6fea0a",
+      "uid": "1b590515b7cf9cc5baaee74fcdbeab19",
+      "username": "elithecoder"
+    },
+    "merkle_root": {
+      "ctime": 1576447292,
+      "hash": "15cc6bdc738aa9049377d352fad3475096e853b261b086467b478a4266f2951c47343ff075c5bbafcb70829103133fec0d3dc1af0174c29ec61bb278108ffb93",
+      "hash_meta": "6d4bc5628a42c92d90d7ec08cfd4e1377ad8598e14f296b4db7a6d69f21fea7d",
+      "seqno": 13610528
+    },
+    "service": {
+      "entropy": "jpAWt1KNB/CChlqjCM95ijUg",
+      "hostname": "elithecoder.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.1.1"
+  },
+  "ctime": 1576447299,
+  "expire_in": 504576000,
+  "prev": "9d2e3f15525d0b49705e364b1e73252f321a363ade2316d0562b6e57ea2026de",
+  "seqno": 45,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghOI9vHz8huA1fFQzppo95SdDOKax1nbSsgJHufwcb+oKp3BheWxvYWTESpcCLcQgnS4/FVJdC0lwXjZLHnMlLzIaNjreIxbQVituV+ogJt7EIKDcelyHi1KYGUmBXbK4mnGV32zONYXP8pxqvqrfRIhXAgHCo3NpZ8RAv7ei7UIxbYg2gPoQdhryu8ZzzXyDFVa2LqaWfIlOenfXH49UKhZbCNpFcxfjKVpeVCK05JE9jZiWGLhVRFCfDKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKIEb3mJbQomeAULncALtw81eKkQrQvoLqT6SHn/KTpbo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/elithecoder
+
+==================================================================
