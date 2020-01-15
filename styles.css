@@ -20,12 +20,11 @@ h1 {
 
 div {
     margin: 0;
-    position: fixed;
+    position: relative;
     top: 50%;
-    left: 50%;
+    left: 75%;
     height: 737px;
     width: 64px;
-    transform: translate(400%, -34vw);
     padding: 0;
     border-width: 0;
 }
