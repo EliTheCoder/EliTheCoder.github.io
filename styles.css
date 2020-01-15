@@ -31,14 +31,14 @@ div {
 }
 
 img.lin {
-    width: 64px;
-    height: 64px;
+    width: 8vh;
+    height: 8vh;
     transition: all 0.25s ease;
 }
 
 img.lin:hover {
-    width: 56px;
-    height: 56px;
+    width: 7vh;
+    height: 7vh;
 }
 
 img.logo {
