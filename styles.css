@@ -1,51 +1,56 @@
-@import url('https://fonts.googleapis.com/css?family=Kanit:800&display=swap');
-
 body {
-    background-color: black;
+	background-color: #080808;
+}
+.title {
+	position: absolute;
+	display: block;
+	margin: 0;
+	height: 10px;
+	top: -200px;
+	width: 100vw;
+	text-align: center;
+	font-size: 120px;
+	font-family: Oswald;
+	color: white;
 }
 
-* {
-    color: white;
+.logo {
+	position: absolute;
+	display: block;
+	top: -200px;
+	left: 50vw;
+	transform: translate(-50%, 0);
+	height: 144px;
+	width: 144px;
 }
 
-h1 {
-    margin: 0;
-    font-size: 20vw;
-    font-family: 'Kanit', sans-serif;
-    position: fixed;
-    top: 50%;
-    padding-left: 10%;
-    transform: translate(0%, -50%);
+#social {
+	margin: 0 auto;
+	display: block;
+	padding: 0;
+	position: absolute;
+	top: -200px;
+	left: 50vw;
+	transform: translate(-50%, 0);
 }
 
-div {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    left: 75%;
-    height: 737px;
-    width: 64px;
-    padding: 0;
-    border-width: 0;
+#wrap {
+	display: inline-block;
+	margin: 0 auto;
 }
 
-img.lin {
-    width: 8vh;
-    height: 8vh;
-    transition: all 0.25s ease;
+.lin {
+	display: auto;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	transition: padding 0.5s;
 }
 
-img.lin:hover {
-    width: 7vh;
-    height: 7vh;
-}
-
-img.logo {
-    width: 128px;
-    height: 128px;
-    margin: 0;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.lin:hover {
+	padding: 8px;
+	border-style: solid;
+	border-radius: 2px;
+	border-width: 2px;
+	border-color: #fff;
 }
