@@ -1,6 +1,11 @@
 body {
 	background-color: #080808;
 }
+
+html {
+	overflow: hidden;
+}
+
 .title {
 	position: absolute;
 	display: block;
