@@ -54,16 +54,12 @@ html {
 	display: auto;
 	margin: 0;
 	padding: 0;
-	border: 0;
+	border-radius: 8px;
 	transition: padding 0.5s;
 }
 
 .lin:hover {
 	padding: 8px;
-	border-style: solid;
-	border-radius: 2px;
-	border-width: 2px;
-	border-color: #fff;
 }
 
 #particles-js {
